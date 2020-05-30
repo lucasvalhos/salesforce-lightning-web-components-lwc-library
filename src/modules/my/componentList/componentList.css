@@ -1,0 +1,87 @@
+.component-list {
+    max-width: 1200px;
+    margin: 50px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.component-card {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px;
+}
+
+.component-card .title {
+    color: rgb(22, 50, 92);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+}
+
+.component-card .title:hover {
+    text-decoration: underline;
+}
+
+.component-card .category {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+.component-card .description {
+    font-size: 13px;
+}
+
+.component-card .owner {
+    display: flex;
+    align-items: center;
+}
+
+.component-card .avatar {
+    margin-right: 5px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.component-card .owner a {
+    margin: 0;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #16325c;
+}
+
+.component-card .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.component-card .grid h3 {
+    font-size: 13px;
+    margin: 3px 0 10px;
+    color: #16325c;
+}
+
+.component-card .playground-url {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.component-card .playground-url a {
+    font-size: 13px;
+}
+
+@media (max-width: 1200px) {
+    .component-list {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .component-list {
+        grid-template-columns: 100%;
+    }
+}
