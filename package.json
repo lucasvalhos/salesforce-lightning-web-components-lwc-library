@@ -1,9 +1,9 @@
 {
     "name": "lwc-library",
-    "description": "My amazing LWC app",
+    "description": "Lightning Web Components LWC Library",
     "version": "0.0.1",
     "author": "Lucas Valhos",
-    "bugs": "https://github.com/Lucas Valhos/lwc-library/issues",
+    "bugs": "https://github.com/lucasvalhos/salesforce-lightning-web-components-lwc-library/issues",
     "dependencies": {
         "compression": "^1.7.4",
         "express": "^4.17.1",
@@ -11,6 +11,7 @@
     },
     "devDependencies": {
         "eslint": "^7.1.0",
+        "gh-pages": "^3.0.0",
         "husky": "^4.2.5",
         "lint-staged": "^10.2.7",
         "lwc-services": "^2.0.7",
@@ -21,7 +22,7 @@
         "npm": ">=6.4.1",
         "yarn": ">=1.9.4"
     },
-    "homepage": "https://github.com/Lucas Valhos/lwc-library",
+    "homepage": "https://lucasvalhos.github.io/salesforce-lightning-web-components-lwc-library/",
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -39,7 +40,7 @@
             "eslint"
         ]
     },
-    "repository": "Lucas Valhos/lwc-library",
+    "repository": "lucasvalhos/salesforce-lightning-web-components-lwc-library",
     "scripts": {
         "build": "lwc-services build -m production",
         "build:development": "lwc-services build",
@@ -51,6 +52,8 @@
         "test:unit:coverage": "lwc-services test:unit --coverage",
         "test:unit:debug": "lwc-services test:unit --debug",
         "test:unit:watch": "lwc-services test:unit --watch",
-        "watch": "lwc-services watch"
+        "watch": "lwc-services watch",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     }
 }
