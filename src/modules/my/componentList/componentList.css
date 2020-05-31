@@ -44,6 +44,7 @@
     margin-right: 5px;
     border-radius: 25px;
     overflow: hidden;
+    height: 40px;
 }
 
 .component-card .owner a {
@@ -83,5 +84,10 @@
 @media (max-width: 767px) {
     .component-list {
         grid-template-columns: 100%;
+    }
+
+    .component-card {
+        margin: 0;
+        margin-bottom: 15px;
     }
 }

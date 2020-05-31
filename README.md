@@ -7,17 +7,18 @@
 A list of amazing components made with [LWC](https://lwc.dev).
 
 ### Web Version
+
 [https://salesforce-lightning-web-components-lwc-library.valhos.com/](https://salesforce-lightning-web-components-lwc-library.valhos.com/)
 
 ### Contributing
 
 Please review our [contributing guidelines](https://github.com/lucasvalhos/salesforce-lightning-web-components-lwc-library/blob/master/CONTRIBUTING.md).
 
-
 ## UI Components
 
-- [LWC-Stencil](https://github.com/gavignon/lwc-stencil) - Lightning Web Component used for Skeleton Loading.
+-   [Confirmation Dialog](https://github.com/marcoalmodova/confirm-dialog) - A Confirmation Dialog Lightning Web Component.
+-   [Stencil](https://github.com/gavignon/lwc-stencil) - Lightning Web Component used for Skeleton Loading.
 
 ## Tools
 
-- [LWC SOQL Builder](https://github.com/LWC-Components/lwc-soql-builder) - Awesome SOQL execution tool developed in Lightning Web Components Open Source.
+-   [LWC SOQL Builder](https://github.com/LWC-Components/lwc-soql-builder) - Awesome SOQL execution tool developed in Lightning Web Components Open Source.
