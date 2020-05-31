@@ -1,5 +1,9 @@
 # Salesforce Lightning Web Components (LWC) Library
 
+[![HitCount](http://hits.dwyl.io/lucasvalhos/salesforce-lightning-web-components-lwc-library.svg)](http://hits.dwyl.io/lucasvalhos/salesforce-lightning-web-components-lwc-library)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Contributors](https://badgen.net/github/contributors/lucasvalhos/salesforce-lightning-web-components-lwc-library)](https://github.com/lucasvalhos/salesforce-lightning-web-components-lwc-library/graphs/contributors)
+
 A list of amazing components made with [LWC](https://lwc.dev).
 
 ### Web Version
