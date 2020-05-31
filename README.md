@@ -1,11 +1,16 @@
-# lwc-library
+# Salesforce Lightning Web Components (LWC) Library
 
-Here will be some information about the app.
+A list of amazing components made with [LWC](https://lwc.dev).
 
-## How to start?
+### Contributing
 
-Start simple by running `yarn watch` (or `npm run watch`, if you set up the project with `npm`). This will start the project with a local development server.
+Please review our [contributing guidelines](https://github.com/lucasvalhos/salesforce-lightning-web-components-lwc-library/blob/master/CONTRIBUTING.md).
 
-The source files are located in the [`src`](./src) folder. All web components are within the [`src/modules`](./src/modules) folder. The folder hierarchy also represents the naming structure of the web components.
 
-Find more information on the main repo on [GitHub](https://github.com/muenzpraeger/create-lwc-app).
+## UI Components
+
+- [LWC-Stencil](https://github.com/gavignon/lwc-stencil) - Lightning Web Component used for Skeleton Loading.
+
+## Tools
+
+- [LWC SOQL Builder](https://github.com/LWC-Components/lwc-soql-builder) - Awesome SOQL execution tool developed in Lightning Web Components Open Source.
