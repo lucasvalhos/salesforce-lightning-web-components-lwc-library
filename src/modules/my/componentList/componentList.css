@@ -1,9 +1,29 @@
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.search {
+    margin: 15px 0;
+    padding: 15px;
+}
+
+.search input {
+    font-size: 14px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 3px #afafaf5e;
+}
 .component-list {
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 15px auto;
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
+    padding: 0 15px;
 }
 
 .component-card {

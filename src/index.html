@@ -27,9 +27,17 @@
             href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         />
         <style>
-            body,
-            * {
+            *,
+            *:before,
+            *:after {
                 font-family: 'Open Sans', sans-serif;
+                margin: 0;
+                padding: 0;
+
+                -webkit-box-sizing: border-box !important;
+                -moz-box-sizing: border-box !important;
+                -ms-box-sizing: border-box !important;
+                box-sizing: border-box !important;
             }
         </style>
         <meta name="viewport" content="width=device-width,initial-scale=1" />

@@ -1,6 +1,8 @@
 import { LightningElement } from 'lwc';
 
 export default class ComponentList extends LightningElement {
+    searchText = '';
+
     componentRecords = [
         {
             createdAt: '2020-05-31 11:25:46',
@@ -51,6 +53,19 @@ export default class ComponentList extends LightningElement {
     ];
 
     get components() {
-        return this.componentRecords;
+        return this.componentRecords.filter(
+            (c) =>
+                c.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
+                c.description
+                    .toLowerCase()
+                    .includes(this.searchText.toLowerCase()) ||
+                c.owner.name
+                    .toLowerCase()
+                    .includes(this.searchText.toLowerCase())
+        );
+    }
+
+    search(event) {
+        this.searchText = event.target.value;
     }
 }

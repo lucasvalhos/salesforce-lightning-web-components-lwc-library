@@ -1,4 +1,9 @@
 <template>
+    <div class="content-wrapper">
+        <div class="search">
+            <input type="text" placeholder="Search" onkeyup={search} />
+        </div>
+    </div>
     <div class="component-list">
         <template for:each={components} for:item="component">
             <div class="component-card" key={component.githubRepoUrl}>
