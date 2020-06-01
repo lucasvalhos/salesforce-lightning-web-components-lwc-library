@@ -33,16 +33,17 @@ header {
     font-weight: 300;
 }
 
-.link {
+.links {
     margin-left: auto;
 }
-.link a {
+.links a {
     border: none;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
     background-color: #ff6000;
     color: white;
+    margin-left: 15px;
 }
 
 .mobile-title {
@@ -57,7 +58,7 @@ header {
     }
 }
 @media (max-width: 767px) {
-    .link,
+    .links,
     .logo .title {
         display: none;
     }

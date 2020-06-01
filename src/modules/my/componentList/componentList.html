@@ -3,43 +3,66 @@
         <div class="search">
             <input type="text" placeholder="Search" onkeyup={search} />
         </div>
-    </div>
-    <div class="component-list">
-        <template for:each={components} for:item="component">
-            <div class="component-card" key={component.githubRepoUrl}>
-                <a href={component.githubRepoUrl} class="title" target="_blank"
-                    >{component.name}</a
-                >
-                <div class="category">{component.category}</div>
-                <p class="description">{component.description}</p>
-                <div class="grid">
-                    <div class="col">
-                        <h3>Author</h3>
-                        <div class="owner">
-                            <div class="avatar">
-                                <img
-                                    src={component.owner.avatar}
-                                    alt={component.owner.name}
-                                />
-                            </div>
-                            <a
-                                class="name"
-                                target="_blank"
-                                href={component.owner.githubUrl}
-                                >{component.owner.name}</a
-                            >
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3>Playground URL</h3>
-                        <div class="playground-url">
-                            <a href={component.playgroundUrl} target="_blank">
-                                {component.playgroundUrl}
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="grid">
+            <div class="col filters">
+                <h6>Filters</h6>
+                <ul>
+                    <template for:each={categories} for:item="c">
+                        <li
+                            key={c.name}
+                            data-name={c.name}
+                            onclick={filter}
+                            data-active={c.active}
+                        >
+                            {c.name} <small>{c.total}</small>
+                        </li>
+                    </template>
+                </ul>
             </div>
-        </template>
+            <div class="col component-list">
+                <template for:each={components} for:item="component">
+                    <div class="component-card" key={component.githubRepoUrl}>
+                        <a
+                            href={component.githubRepoUrl}
+                            class="title"
+                            target="_blank"
+                            >{component.name}</a
+                        >
+                        <div class="category">{component.category}</div>
+                        <p class="description">{component.description}</p>
+                        <div class="grid">
+                            <div class="col">
+                                <h3>Author</h3>
+                                <div class="owner">
+                                    <div class="avatar">
+                                        <img
+                                            src={component.owner.avatar}
+                                            alt={component.owner.name}
+                                        />
+                                    </div>
+                                    <a
+                                        class="name"
+                                        target="_blank"
+                                        href={component.owner.githubUrl}
+                                        >{component.owner.name}</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>Playground URL</h3>
+                                <div class="playground-url">
+                                    <a
+                                        href={component.playgroundUrl}
+                                        target="_blank"
+                                    >
+                                        {component.playgroundUrl}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
     </div>
 </template>

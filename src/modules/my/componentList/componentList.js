@@ -2,7 +2,7 @@ import { LightningElement } from 'lwc';
 
 export default class ComponentList extends LightningElement {
     searchText = '';
-
+    currentFilters = [];
     componentRecords = [
         {
             createdAt: '2020-05-31 11:25:46',
@@ -55,17 +55,50 @@ export default class ComponentList extends LightningElement {
     get components() {
         return this.componentRecords.filter(
             (c) =>
-                c.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
-                c.description
-                    .toLowerCase()
-                    .includes(this.searchText.toLowerCase()) ||
-                c.owner.name
-                    .toLowerCase()
-                    .includes(this.searchText.toLowerCase())
+                (c.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
+                    c.description
+                        .toLowerCase()
+                        .includes(this.searchText.toLowerCase()) ||
+                    c.owner.name
+                        .toLowerCase()
+                        .includes(this.searchText.toLowerCase())) &&
+                (this.currentFilters.length === 0 ||
+                    this.currentFilters.includes(c.category))
         );
+    }
+
+    get categories() {
+        const cats = this.componentRecords.reduce((p, c) => {
+            if (typeof p[c.category] === 'undefined') {
+                p[c.category] = 0;
+            }
+            p[c.category]++;
+            return p;
+        }, {});
+
+        return Object.keys(cats).map((k) => {
+            return {
+                name: k,
+                total: cats[k],
+                active: this.currentFilters.includes(k)
+            };
+        });
     }
 
     search(event) {
         this.searchText = event.target.value;
+    }
+
+    filter(event) {
+        if (this.currentFilters.includes(event.target.dataset.name)) {
+            this.currentFilters.splice(
+                this.currentFilters.indexOf(event.target.dataset.name),
+                1
+            );
+        } else {
+            this.currentFilters.push(event.target.dataset.name);
+        }
+
+        this.currentFilters = [...this.currentFilters];
     }
 }
