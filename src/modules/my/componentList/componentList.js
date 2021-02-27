@@ -11,7 +11,7 @@ export default class ComponentList extends LightningElement {
             description: 'A Confirmation Dialog Lightning Web Component.',
             githubRepoUrl: 'https://github.com/marcoalmodova/confirm-dialog',
             playgroundUrl:
-                'https://developer.salesforce.com/docs/component-library/tools/playground/m40fk3DpW/1/edit',
+                'https://webcomponents.dev/edit/NjRHM1jyLEojK7zOYJh7/src/app.html',
             owner: {
                 name: 'Marco Almodova',
                 githubNickname: 'marcoalmodova',
@@ -23,10 +23,8 @@ export default class ComponentList extends LightningElement {
             createdAt: '2020-05-31 06:31:22',
             name: 'LWC SOQL Builder',
             category: 'Tools',
-            description:
-                'Awesome SOQL execution tool developed in Lightning Web Components Open Source',
-            githubRepoUrl:
-                'https://github.com/lwc-soql-builder/lwc-soql-builder',
+            description: 'Awesome SOQL execution tool developed in Lightning Web Components Open Source',
+            githubRepoUrl: 'https://github.com/lwc-soql-builder/lwc-soql-builder',
             playgroundUrl: 'https://lwc-soql-builder.github.io/',
             owner: {
                 name: 'atskimura',
@@ -41,8 +39,7 @@ export default class ComponentList extends LightningElement {
             category: 'UI Components',
             description: 'Lightning Web Component used for Skeleton Loading',
             githubRepoUrl: 'https://github.com/gavignon/lwc-stencil',
-            playgroundUrl:
-                'https://developer.salesforce.com/docs/component-library/tools/playground/1dJhbHCv8/1/edit',
+            playgroundUrl: 'https://webcomponents.dev/edit/DnH2gUyfeRLZVOrr8iZF/src/app.html',
             owner: {
                 name: 'Gil Avignon',
                 githubNickname: 'gavignon',
